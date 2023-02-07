@@ -5,7 +5,7 @@ class Task {
         this.todo = todo;
     }
     
-}
+} 
 
 
 
