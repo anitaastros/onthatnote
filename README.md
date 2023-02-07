@@ -1,6 +1,8 @@
 # onthatnote
 Todo-list app
 
+Meant to help people with overview of everyday tasks
+
 # usage
 
 import List from "list.mjs"
