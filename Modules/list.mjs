@@ -1,12 +1,12 @@
 class List {
 
     constructor(list) {
-        this.list = [];
+        this.list = list;
     }
 
-    function addTask(task) {
-        return this.list.push(task) - 1;
-    },
+    addTask(task) {
+        return this.list.push(task);
+    }
     
 }
 

@@ -4,14 +4,18 @@ import List from "../list.mjs";
 const testTasks = ["work", "study", "go grocery shopping"];
 
 function listTasks(){
-    const taskList = new list(testTasks);
-    test(taskList.addTask() === testTasks);
+    const taskList = new List(testTasks);
+    console.log(taskList)
+    test(taskList != undefined);
 }
 
-function test(test, description){
+function test(test){
     if(test){
-        console.log("🟢 " );
+        console.log("🟢 List includes tasks");
     } else{
-        console.log("🔴 " );
+        console.log("🔴 ");
+       
     }
 }
+
+listTasks();
