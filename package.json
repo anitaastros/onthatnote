@@ -1,0 +1,23 @@
+{
+  "name": "onthatnote",
+  "version": "1.0.0",
+  "description": "Todo-list app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anitaastros/onthatnote.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anitaastros/onthatnote/issues"
+  },
+  "homepage": "https://github.com/anitaastros/onthatnote#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "jokemaster": "git+https://github.com/mm-207/JokeModuleDemo.git"
+  }
+}
