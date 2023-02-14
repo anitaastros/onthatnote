@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <button>Joke in English</button>
     <button>Joke in Norwegian</button>
+    <div id="container"></div>
     <script>
-        
+
+        async function fetchJokes() {
+
+            let url = 'http://localhost:8080/jokes';
+
+            let container = document.getElementById('container')
+            const config = {
+                method: 'GET',
+                headers: {
+                    'content-type': 'application/json'
+                }
+            };
+
+            fetch(url, config).then((res) => {
+                console.log("Request finished");
+                return res.json();
+            }).then(jsonRes => {
+                // Do something with the object?
+                console.log("JSON results", jsonRes);
+                for (var i = 0; i < jsonRes.length; i++) {
+                    var obj = jsonRes[i]
+                }
+            })
+        }
+
+        fetchJokes()
+
     </script>
-    
+
 </body>
+
 </html>
