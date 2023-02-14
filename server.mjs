@@ -14,7 +14,16 @@ server.set('port', port);
 server.use(express.static('public'));
 
 
-
+server.get('/jokes', async (req, res) => {
+  
+  
+    // Send a request to the task module to get all tasks
+    const getJokes = req.query.joke
+  
+    res.status(200).json(getJokes);
+    // return tasks;
+    
+  });
 
 
 // Vi starter serveren med funksjonen listen. 
