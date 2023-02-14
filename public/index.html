@@ -9,34 +9,32 @@
 </head>
 
 <body>
-    <button>Joke in English</button>
-    <button>Joke in Norwegian</button>
+    <button onClick="fetchJokes('en')">Joke in English</button>
+    <button onClick="fetchJokes('no')">Joke in Norwegian</button>
     <div id="container"></div>
+
     <script>
+        async function fetchJokes(localization) {
+            let url = `http://localhost:8080/${localization}/jokes`;
 
-        async function fetchJokes() {
+            let container = document.getElementById('container');
 
-            let url = 'http://localhost:8080/jokes';
-
-            let container = document.getElementById('container')
             const config = {
                 method: 'GET',
                 headers: {
-                    'content-type': 'application/json'
-                }
+                    'content-type': 'application/json',
+                },
             };
 
             fetch(url, config).then((res) => {
                 console.log("Request finished");
+                console.log(res)
                 return res.json();
             }).then(jsonRes => {
                 // Do something with the object?
                 console.log("JSON results", jsonRes);
             })
         }
-
-        fetchJokes()
-
     </script>
 
 </body>

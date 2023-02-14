@@ -5,11 +5,12 @@
   "main": "index.js",
   "dependencies": {
     "express": "^4.18.2",
-    "jokemaster": "git+https://github.com/mm-207/JokeModuleDemo.git"
+    "jokemaster": "git+https://github.com/mm-207/JokeModuleDemo.git",
+    "languagemodule": "git+https://github.com/anitaastros/languagemodule.git"
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node server.mjs",
+    "start": "nodemon server.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
